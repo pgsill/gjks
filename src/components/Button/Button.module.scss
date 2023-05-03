@@ -1,0 +1,67 @@
+@import "../../scss/shared.module";
+
+.button {
+  width: 312px;
+  max-width: 100%;
+  height: 72px;
+  padding: 0 19px;
+  box-sizing: border-box;
+  border-radius: 70px;
+  border: 2px solid $color-white;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  font-family: "Open Sans", sans-serif;
+  font-size: calc(12px + 0.42vw);
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.5px;
+  text-align: left;
+
+  transition: background-color 300ms ease-in-out;
+
+  &:hover {
+    background-color: $color-lime-green;
+  }
+}
+
+.defaultButton {
+  background-color: $color-slate-gray;
+  color: $color-white;
+
+  span {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip;
+  }
+}
+
+.iconButton {
+  background-color: $color-slate-gray;
+  color: $color-white;
+
+  span {
+    width: 226px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  @media (max-width: 1150px) {
+    img {
+      width: 18px;
+    }
+
+    span {
+      width: 80%;
+    }
+  }
+}
+
+.disabled {
+  background-color: $color-gray;
+  cursor: not-allowed;
+}

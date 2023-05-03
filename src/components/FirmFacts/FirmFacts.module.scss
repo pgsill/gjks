@@ -1,0 +1,83 @@
+@import "../../scss/shared.module";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $color-slate-gray;
+}
+
+.mainPage {
+  padding: 127px 79px;
+}
+
+.content {
+  width: 1510px;
+  max-width: 100%;
+}
+
+.closeButton {
+  border: none;
+  background: none;
+  padding: 0;
+
+  position: absolute;
+  top: 50px;
+  right: 64px;
+  width: 50px;
+  height: 50px;
+}
+
+.heading {
+  font-family: "Open Sans", sans-serif;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 66px;
+  text-align: left;
+
+  color: $color-white;
+
+  margin-top: 0;
+  padding-bottom: 22px;
+
+  border-bottom: 1px solid rgba($color-white, 0.2);
+
+  &:first-letter {
+    margin-left: -5px;
+  }
+}
+
+.grid {
+  width: 100%;
+  max-width: 1510px;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 322px);
+  gap: 18px;
+
+  > div:first-child {
+    grid-row: span 2;
+  }
+
+  @media (max-width: 1500px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 1150px) {
+    width: 100%;
+
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(auto-fit, 200px);
+    grid-auto-flow: dense;
+
+    div:first-child {
+      grid-row: unset;
+      grid-column: 1/-1;
+    }
+  }
+}

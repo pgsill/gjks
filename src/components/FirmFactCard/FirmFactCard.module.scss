@@ -1,0 +1,51 @@
+@import "../../scss/shared.module";
+
+.centered {
+  justify-content: center;
+  align-items: center;
+}
+
+.nonCentered {
+  align-items: center;
+  padding-top: 50px;
+}
+
+.firmFactCard {
+  background-color: $color-white;
+
+  display: flex;
+  flex-direction: column;
+
+  cursor: pointer;
+  transition: background-color 300ms ease-in-out, box-shadow 300ms ease-in-out;
+}
+
+.defaultHover {
+  &:hover {
+    background-color: $color-lime-green;
+
+    :global(button.button) {
+      background-color: transparent;
+
+      &:disabled {
+        background-color: $color-gray;
+      }
+    }
+  }
+}
+
+.borderHover {
+  &:hover {
+    background-color: $color-white;
+    box-shadow: inset 15px 15px 0 $color-lime-green,
+      inset -15px -15px 0 $color-lime-green;
+  }
+
+  :global(button.button) {
+    background-color: $color-lime-green;
+
+    &:disabled {
+      background-color: $color-gray;
+    }
+  }
+}
