@@ -7,7 +7,7 @@
 
 .nonCentered {
   align-items: center;
-  padding-top: 50px;
+  padding-top: 48px;
 }
 
 .firmFactCard {
@@ -25,6 +25,8 @@
     background-color: $color-lime-green;
 
     :global(button.button) {
+      width: 312px;
+      height: 72px;
       background-color: transparent;
 
       &:disabled {
@@ -48,4 +50,12 @@
       background-color: $color-gray;
     }
   }
+}
+
+.asymmetricPadding {
+  padding-right: 4px;
+}
+
+.heroCardPadding {
+  padding-right: 8px;
 }

@@ -15,56 +15,57 @@ const Grid = ({ children }) => <div className={styles.grid}>{children}</div>;
 export const FirmFacts = () => {
   return (
     <div className={styles.mainPage}>
+
       <div className={styles.content}>
         <CloseButton />
 
         <h2 className={styles.heading}>Firm Facts</h2>
 
         <Grid>
-          <FirmFactCard centered>
+          <FirmFactCard centered heroCardPadding>
             <Button
               variant="icon"
-              text="This is a two line button that terminates with an ellipsis for no content"
+              text="This is a two line button that terminates with ellipsis "
             />
           </FirmFactCard>
 
           <FirmFactCard centered>
             <Button
               variant="icon"
-              text="This is a two line button that terminates with an ellipsis for no content"
+              text="This is a two line button that terminates with ellipsis "
             />
           </FirmFactCard>
 
-          <FirmFactCard centered>
+          <FirmFactCard centered asymmetricPadding>
             <Button text="This is a one line button" />
           </FirmFactCard>
 
-          <FirmFactCard centered>
+          <FirmFactCard centered asymmetricPadding>
             <Button
               variant="icon"
-              text="This is a two line button that terminates with an ellipsis for no content"
+              text="This is a two line button that terminates with ellipsis "
             />
           </FirmFactCard>
 
           <FirmFactCard>
             <Button
               variant="icon"
-              text="This is a two line button that terminates with an ellipsis for no content"
+              text="This is a two line button that terminates with ellipsis "
             />
           </FirmFactCard>
 
-          <FirmFactCard>
+          <FirmFactCard asymmetricPadding>
             <Button
               disabled
               variant="icon"
-              text="This is a two line button that terminates with an ellipsis for no content"
+              text="This is a two line button that terminates with ellipsis "
             />
           </FirmFactCard>
 
-          <FirmFactCard variant="border">
+          <FirmFactCard variant="border" asymmetricPadding>
             <Button
               variant="icon"
-              text="This is a two line button that terminates with an ellipsis for no content"
+              text="This is a two line button that terminates with ellipsis "
             />
           </FirmFactCard>
         </Grid>
