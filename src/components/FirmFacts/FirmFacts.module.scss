@@ -19,7 +19,7 @@ body {
 
   margin: auto;
   width: 1510px;
-  max-width: 100%;
+  max-width: calc(100vw - 5%);
 }
 
 .closeButton {
@@ -72,7 +72,7 @@ body {
     }
   }
 
-  @media (max-width: 1500px) {
+  @media (max-width: 1439px) {
     grid-template-columns: repeat(3, 1fr);
   }
 
